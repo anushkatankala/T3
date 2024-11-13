@@ -1,52 +1,35 @@
-import java.util.Arrays;
+import java.util.*;
 
 public class MusicExchangeCenter {
-    private User[] users;
+    private List<User> users;
+    private Map<String, Float> royalties = new HashMap<>();
+    private List<Song> downloadedSongs = new ArrayList<>();
 
     public MusicExchangeCenter (){
-        users = null;
+        users = new ArrayList<>();
     }
 
-    public User[] onlineUsers (){
-        int count = 0;
-        for(User u: users){
-            if (u.isOnline()){
-                count++;
-            }
-        }
-        User[] online = new User[count];
-        int u_count = 0;
+    public List<User> onlineUsers (){
+        List<User> online = new ArrayList<>();
         for (User user : users) {
             if (user.isOnline()) {
-                online[u_count] = user;
-                u_count++;
+                online.add(user);
             }
         }
-
         return online;
     }
 
-    public Song[] allAvailableSongs (){
-        User[] onlineUsers = onlineUsers();
-
-        int availCount = 0;
-
+    public List<Song> allAvailableSongs (){
+        List<User> onlineUsers = onlineUsers();
+        List<Song> availSongs = new ArrayList<>();
         for (User u: onlineUsers){
-            availCount += u.getSongList().length;
+            availSongs.addAll(u.getSongList());
         }
-
-        Song[] availSongs = new Song[availCount];
-        for (User u: onlineUsers){
-            for (Song s : u.getSongList()){
-                availSongs[availSongs.length - 1] = s;
-            }
-        }
-
         return availSongs;
     }
 
     public String toString(){
-        return "Music Exchange Center (" + onlineUsers().length + " users online, " + allAvailableSongs().length + " songs available)";
+        return "Music Exchange Center (" + onlineUsers().size() + " users online, " + allAvailableSongs().size() + " songs available)";
     }
 
     public String userWithName(String s){
@@ -60,26 +43,36 @@ public class MusicExchangeCenter {
 
     public void registerUser(User x){
         if (userWithName(x.getUserName()) == null){
-            users[users.length - 1] = x;
+            users.add(x);
         }
     }
 
-    public Song[] availableSongsByArtist(String artist){
-        int artCount = 0;
+    public List<Song> availableSongsByArtist(String artist){
+
+        List<Song> availArt = new ArrayList<>();
         for (Song s: allAvailableSongs()){
             if (s.getArtist().contains(artist)){
-                artCount++;
-            }
-        }
-        Song[] availArt = new Song[artCount];
-        for (Song s: allAvailableSongs()){
-            if (s.getArtist().contains(artist)){
-                availArt[availArt.length - 1] = s;
+                availArt.add(s);
             }
         }
         return availArt;
     }
 
+    public Song getSong(String title, String ownerName){
+        for (User u: onlineUsers()){
+            if (u.getUserName().contains(ownerName)){
+                for (Song s: u.getSongList()){
+                    if (s.getTitle().contains(title)){
+                        return s;
+                    }
+                }
+            }
+        }
+        return null;
+    }
 
+    public void displayRoyalties(){
+
+    }
 
 }

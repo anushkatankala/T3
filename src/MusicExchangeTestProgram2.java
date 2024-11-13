@@ -1,4 +1,7 @@
-/*public class MusicExchangeTestProgram2 {
+import java.util.List;
+import java.util.ArrayList;
+
+public class MusicExchangeTestProgram2 {
   public static void main(String args[]) {
     List<String> catalog;
     
@@ -52,10 +55,9 @@
     
     // Simulate a user requesting a list of songs by a specific artist 
     catalog = discoStew.requestSonglistByArtist(mec, "Jaw");
-    System.out.println("Songӳ by Jaw: ");
+    System.out.println("Songs by Jaw: ");
     for (String s: catalog){
       System.out.println("  " + s);
     }
   }
 }
-*/

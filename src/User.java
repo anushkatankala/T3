@@ -1,32 +1,31 @@
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
   private String     userName;
   private boolean    online;
-  private Song[] songList;
+  private List<Song> songList;
 
   public User()  { this(""); }
   
   public User(String u)  {
     userName = u;
     online = false;
-    songList = null;
+    songList = new ArrayList<>();
   }
   
   public String getUserName() { return userName; }
   public boolean isOnline() { return online; }
-  public Song[] getSongList(){return songList; }
+  public List<Song> getSongList(){return songList; }
 
   public String toString()  {
-    String s = "" + userName + ": " + getSongList().length + " songs (";
+    String s = "" + userName + ": " + getSongList().size() + " songs (";
     if (!online) s += "not ";
     return s + "online)";
   }
 
   public void addSong(Song s){
-    if (songList == null) {
-      songList[] = s;  // Initialize songList if it's null
-    }
+    s.setOwner(this);
     songList.add(s);  // Add the song to the end of the list
 
   }
@@ -50,4 +49,55 @@ public class User {
   public void logoff(){
     this.online = false;
   }
+
+  public List<String> requestCompleteSonglist(MusicExchangeCenter m){
+    List<String> songList = new ArrayList<>();
+    String title = "TITLE";
+    String artist = "ARTIST";
+    String time = "TIME";
+    String owner = "OWNER";
+    songList.add(String.format("    %-30s %-16s %-7s %-15s", title, artist, time, owner));
+    songList.add("");
+    int count = 0;
+    for (Song s: m.allAvailableSongs()){
+      count++;
+      songList.add(String.format("%2d. %-30s %-16s %-1s:%-5s %-10s", count, s.getTitle(), s.getArtist(), s.getMinutes(), s.getSeconds(), s.getOwner().getUserName()));
+    }
+    return songList;
+  }
+
+  public List<String> requestSonglistByArtist(MusicExchangeCenter m, String artist){
+    List<String> songList = new ArrayList<>();
+    String title = "TITLE";
+    String a = "ARTIST";
+    String time = "TIME";
+    String owner = "OWNER";
+    songList.add(String.format("    %-30s %-16s %-7s %-15s", title, a, time, owner));
+    songList.add("");
+    int count = 0;
+    for (Song s: m.allAvailableSongs()){
+      if (artist.toLowerCase().contains(s.getArtist().toLowerCase())){
+        count++;
+        songList.add(String.format("%2d. %-30s %-16s %-1s:%-5s %-10s", count, s.getTitle(), s.getArtist(), s.getMinutes(), s.getSeconds(), s.getOwner().getUserName()));
+      }
+    }
+    return songList;
+  }
+
+  public boolean songWithTitle(String title){
+    for (Song s: this.getSongList()){
+      if (title.toLowerCase().contains(s.getTitle().toLowerCase())){
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public void downloadSong(MusicExchangeCenter m, String title, String ownerName){
+    if (m.getSong(title, ownerName) != null){
+      this.addSong(m.getSong(title, ownerName));
+    }
+  }
+
+
 }
