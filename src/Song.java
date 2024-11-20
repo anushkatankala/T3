@@ -1,4 +1,4 @@
-public class Song {
+public class Song implements Comparable<Song>{
   private String title;
   private String artist;
   private int duration;
@@ -43,5 +43,10 @@ public class Song {
 
   public String toString()  {
     return("\"" + title + "\" by " + artist + " " + (duration / 60) + ":" + (duration%60));
+  }
+
+  @Override
+  public int compareTo(Song o) {
+    return this.getTitle().compareTo(o.getTitle());
   }
 }

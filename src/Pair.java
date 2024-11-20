@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Pair<K,V> {
     private K key;
     private V value;
@@ -22,4 +24,13 @@ public class Pair<K,V> {
     public void setValue(V value) {
         this.value = value;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Pair<?, ?> pair = (Pair<?, ?>) obj;
+        return value.equals(pair.value);
+    }
+
 }

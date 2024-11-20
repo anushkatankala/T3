@@ -1,4 +1,7 @@
-/*public class MusicExchangeTestProgram {
+// name: Anushka Tankala
+// id: 101339108
+
+public class MusicExchangeTestProgram {
   public static void main(String args[]) {
     // Create a new music exchange center
     MusicExchangeCenter   mec = new MusicExchangeCenter();
@@ -53,4 +56,4 @@
     System.out.println("Available Songs By Jaw: " + mec.availableSongsByArtist("Jaw") + "\n");
   }
 }
-*/
+

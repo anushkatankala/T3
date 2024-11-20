@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3c68bf-e65a-43f1-8471-3a7095eb3865" name="Changes" comment="on register user, we made some oopsies">
+    <list default="true" id="7d3c68bf-e65a-43f1-8471-3a7095eb3865" name="Changes" comment="done q3!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicExchangeCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicExchangeCenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicExchangeTestProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicExchangeTestProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicExchangeTestProgram2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicExchangeTestProgram2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicExchangeTestProgram3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicExchangeTestProgram3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,21 +27,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "anushkatankala"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;anushkatankala&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/anushkatankala/T3.git",
-    "accountId": "9e85dbd1-bf02-4e62-9a0b-bf12f24ce7ee"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/anushkatankala/T3.git&quot;,
+    &quot;accountId&quot;: &quot;9e85dbd1-bf02-4e62-9a0b-bf12f24ce7ee&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2olUGlMeLugxHkVyxYE2LHM42fA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -52,10 +52,11 @@
   "keyToString": {
     "Application.MusicExchangeTestProgram.executor": "Run",
     "Application.MusicExchangeTestProgram2.executor": "Run",
+    "Application.MusicExchangeTestProgram3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/anush/Downloads/uni/compz/LinearADT-CompleteCode",
+    "last_opened_file_path": "C:/Users/anush/Downloads/uni/compz/T3",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -91,12 +92,32 @@
       <option name="project" value="LOCAL" />
       <updated>1731450827178</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="done q3!">
+      <option name="closed" value="true" />
+      <created>1731517881718</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731517881718</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
     <MESSAGE value="on register user, we made some oopsies" />
-    <option name="LAST_COMMIT_MESSAGE" value="on register user, we made some oopsies" />
+    <MESSAGE value="done q3!" />
+    <option name="LAST_COMMIT_MESSAGE" value="done q3!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/User.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
