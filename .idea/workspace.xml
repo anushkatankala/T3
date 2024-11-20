@@ -7,10 +7,7 @@
     <list default="true" id="7d3c68bf-e65a-43f1-8471-3a7095eb3865" name="Changes" comment="done q3!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicExchangeCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicExchangeCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicExchangeTestProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicExchangeTestProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicExchangeTestProgram3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicExchangeTestProgram3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MusicExchangeTestProgram.executor": "Run",
-    "Application.MusicExchangeTestProgram2.executor": "Run",
-    "Application.MusicExchangeTestProgram3.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/anush/Downloads/uni/compz/T3",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MusicExchangeTestProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MusicExchangeTestProgram2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MusicExchangeTestProgram3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anush/Downloads/uni/compz/T3&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anush\Downloads\uni\compz\T3\src" />
@@ -114,7 +111,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/User.java</url>
-          <line>53</line>
+          <line>54</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

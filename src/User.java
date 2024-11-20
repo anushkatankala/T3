@@ -28,6 +28,7 @@ public class User {
     s.setOwner(this);
     songList.add(s);  // Add the song to the end of the list
 
+
   }
 
   public int totalSongTime (){
@@ -93,11 +94,17 @@ public class User {
     return false;
   }
 
-  public void downloadSong(MusicExchangeCenter m, String title, String ownerName){
-    if (m.getSong(title, ownerName) != null){
-      this.addSong(m.getSong(title, ownerName));
+  public void downloadSong(MusicExchangeCenter m, String title, String ownerName) {
+    // Attempt to download the song from the music exchange center
+    Song song = m.getSong(title, ownerName);
+
+    // Only add the song if it's not already in the user's song list
+    if (song != null && !this.getSongList().contains(song)) {
+      this.addSong(song); // Add to the user's song list
     }
   }
+
+
 
 
 }

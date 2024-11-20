@@ -60,20 +60,27 @@ public class MusicExchangeCenter {
         return availArt;
     }
 
-    public Song getSong(String title, String ownerName){
-        for (User u: onlineUsers()){
-            if (u.getUserName().contains(ownerName)){
-                for (Song s: u.getSongList()){
-                    if (s.getTitle().contains(title)){
+    public Song getSong(String title, String ownerName) {
+        for (User u : onlineUsers()) {
+            if (u.getUserName().contains(ownerName)) {
+                for (Song s : u.getSongList()) {
+                    if (s.getTitle().contains(title)) {
+                        // Add the song to the downloadedSongs list
                         downloadedSongs.add(s);
-                        royalties.put(s.getTitle(), 0.25f);
-                        return s;
+
+                        // Update royalties for the artist of the song
+                        String artist = s.getArtist();
+                        royalties.put(artist, royalties.getOrDefault(artist, 0f) + 0.25f);
+
+                        return s;  // Return the song after processing
                     }
                 }
             }
         }
-        return null;
+        return null;  // Return null if the song was not found
     }
+
+
 
     public void displayRoyalties(){
         System.out.println("Amount  Artist\n---------------");
