@@ -85,7 +85,7 @@ public class MusicExchangeCenter {
     public void displayRoyalties(){
         System.out.println("Amount  Artist\n---------------");
         for (String s : royalties.keySet()){
-            System.out.println("$" + royalties.get(s) + s);
+            System.out.printf("$%-6.2f %s%n", royalties.get(s), s);
         }
     }
 

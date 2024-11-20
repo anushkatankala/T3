@@ -95,10 +95,10 @@ public class User {
   }
 
   public void downloadSong(MusicExchangeCenter m, String title, String ownerName) {
-    // Attempt to download the song from the music exchange center
+    // try to download the song from the music exchange center
     Song song = m.getSong(title, ownerName);
 
-    // Only add the song if it's not already in the user's song list
+    // only add the song if it isn't already in the user's song list
     if (song != null && !this.getSongList().contains(song)) {
       this.addSong(song); // Add to the user's song list
     }
